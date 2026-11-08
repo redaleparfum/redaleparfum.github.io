@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réda Le Parfum – L’élégance à chaque instant</title>
+<meta name="description" content="Boutique en ligne Réda Le Parfum : eaux de parfum 90 ml, commande par WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7efe2;--bg2:#efe2c9;--ink:#1a120a;--mute:#6b5a45;--gold:#a8741a;--gold2:#d9a441;--card:#fffaf0;--line:#d9c49a;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#140e08;--bg2:#1e150b;--ink:#f6ead2;--mute:#b9a584;--gold:#e0ae52;--gold2:#f2cf80;--card:#21170c;--line:#4a3817;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#140e08;--bg2:#1e150b;--ink:#f6ead2;--mute:#b9a584;--gold:#e0ae52;--gold2:#f2cf80;--card:#21170c;--line:#4a3817;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Jost,system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;margin:0;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.logo{font:700 26px 'Cormorant Garamond',serif;letter-spacing:.12em;text-decoration:none;color:var(--gold)}
+nav{display:flex;gap:22px;align-items:center}nav a{text-decoration:none;font-size:14px}
+.cartbtn{background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:9px 18px;font:500 14px Jost;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;min-height:calc(100svh - 62px);align-items:center;background:radial-gradient(circle at 70% 45%,var(--bg2),var(--bg) 70%);overflow:hidden}
+.hero .txt{padding:5vw}
+.hero h1{font-size:clamp(64px,11vw,150px);font-weight:700;color:var(--gold);letter-spacing:.02em}
+.hero .sub{font:italic 500 clamp(22px,3vw,34px) 'Cormorant Garamond',serif;margin:10px 0 22px}
+.hero p{color:var(--mute);max-width:42ch}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a120a;border:0;border-radius:999px;padding:13px 28px;font:500 15px Jost;text-decoration:none;cursor:pointer}
+.btn.o{background:none;border:1px solid var(--gold);color:var(--ink);margin-left:10px}
+#stage{position:relative;height:min(82svh,720px);touch-action:pan-y;cursor:grab}
+#stage canvas{display:block;width:100%;height:100%}
+.hint{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:13px;color:var(--mute)}
+section{padding:80px 5vw}
+section h2{font-size:clamp(36px,5vw,58px);margin-bottom:8px}
+.lead{color:var(--mute);margin:0 0 34px;max-width:55ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.card.sel{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.sw{height:210px;overflow:hidden;border-radius:4px;display:grid;place-items:center}
+.sw img{width:100%;height:100%;object-fit:cover}.sw i{width:46px;height:78px;border:2px solid rgba(255,255,255,.7);border-radius:6px 6px 3px 3px;position:relative;background:var(--c)}
+.sw i::before{content:"";position:absolute;left:10px;right:10px;top:-14px;height:12px;background:#111;border-bottom:3px solid var(--gold2)}
+.card h3{font-size:28px}.card small{color:var(--mute)}
+.price{font:700 24px 'Cormorant Garamond',serif;color:var(--gold)}
+.row{display:flex;gap:8px;margin-top:auto}.row button{flex:1;border-radius:999px;padding:9px;font:500 14px Jost;cursor:pointer;border:1px solid var(--gold);background:none;color:var(--ink)}
+.row button.add{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.band{background:var(--bg2);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center}
+.band h3{font-size:28px;color:var(--gold)}.band p{color:var(--mute);margin:6px 0 0}
+footer{padding:50px 5vw;text-align:center;border-top:1px solid var(--line)}
+footer .tel{font:700 clamp(28px,5vw,44px) 'Cormorant Garamond',serif;color:var(--gold);text-decoration:none}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--card);border-left:1px solid var(--line);z-index:50;transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px))}
+#drawer.open{transform:none}
+#items{flex:1;overflow:auto;margin:14px 0}
+.it{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);background:none;color:var(--ink);cursor:pointer}
+.tot{display:flex;justify-content:space-between;font:700 26px 'Cormorant Garamond',serif;margin-bottom:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.chip{border:1px solid var(--gold);background:none;color:var(--ink);border-radius:999px;padding:7px 16px;font:500 14px Jost;cursor:pointer}.chip.on{background:var(--gold);color:#1a120a}
+.lnk{background:none;border:0;color:var(--mute);font:14px Jost;text-decoration:underline;cursor:pointer;margin-top:14px}
+#adm{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 14px 30px}
+#adm.on{display:flex}.pnl{background:var(--card);border:1px solid var(--line);border-radius:8px;width:min(560px,100%);padding:22px}
+.pnl label{display:block;font-size:14px;color:var(--mute);margin:12px 0 4px}.pnl input,.pnl select,.pnl textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:16px Jost}
+.pnl h3{font-size:26px;margin:22px 0 4px}
+[lang="ar"] *{font-family:Cairo,system-ui,sans-serif}[lang="ar"] .logo,[lang="ar"] .hero h1,[lang="ar"] footer .tel{font-family:'Cormorant Garamond',serif}
+.btn.o{margin-left:0;margin-inline-start:10px}.row{flex-wrap:wrap}
+#drawer{right:auto;inset-inline-end:0;border-left:0;border-inline-start:1px solid var(--line)}[dir="rtl"] #drawer{transform:translateX(-105%)}#drawer.open,[dir="rtl"] #drawer.open{transform:none}
+.hr{display:flex;gap:8px;align-items:center}#lang{padding:8px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:14px}
+#burger{display:none;background:none;color:var(--ink);border:1px solid var(--line)}
+#mnav{display:none;position:absolute;top:100%;inset-inline:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 5vw 14px}#mnav.on{display:flex}#mnav a{padding:12px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;padding:18px 5vw;background:var(--ink);color:var(--bg);text-align:center;font-weight:500;font-size:14px}.trust b{color:var(--gold2)}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}.about p{color:var(--mute);margin:0 0 14px}
+.vals{display:grid;gap:14px}.vals div{border:1px solid var(--line);background:var(--card);padding:16px;border-radius:6px}.vals h3{font-size:24px;color:var(--gold)}.vals p{margin:4px 0 0}
+#cf{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:720px}#cf .w{grid-column:1/-1}#cf label{display:block;font-size:14px;color:var(--mute);margin-bottom:4px}
+#cf input,#cf select,#cf textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:16px Jost,sans-serif}
+.fab{position:fixed;inset-inline-end:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px;z-index:40}
+.fb{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}.fb.wa{background:#25D366;animation:pulse 2.2s infinite}.fb.call{background:linear-gradient(135deg,var(--gold2),var(--gold))}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+#vm{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.88);display:none;place-items:center;padding:16px}#vm.on{display:grid}#vm video{max-width:100%;max-height:80svh;display:block;margin-top:10px;border-radius:6px}
+@media(max-width:780px){#burger{display:block}#dnav{display:none}.about,#cf{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.fb.wa{animation:none}}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:999px;transition:.3s;z-index:60;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.hero .txt{padding-bottom:0}nav a{display:none}#stage{height:62svh}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== Responsive : tous appareils ===== */
+:root{--px:max(5vw,calc((100vw - 1240px)/2),env(safe-area-inset-left,0px),env(safe-area-inset-right,0px))}
+html{-webkit-text-size-adjust:100%}body{overflow-x:clip}
+header,section,footer,.trust{padding-left:var(--px);padding-right:var(--px)}
+.hero .txt{padding-inline-start:var(--px);padding-inline-end:3vw}
+footer{padding-bottom:110px}
+#lang{font-size:16px}
+img,video,canvas{max-width:100%}
+@media(min-width:1500px){.grid{grid-template-columns:repeat(4,1fr)}#stage{height:min(82svh,780px)}}
+@media(max-width:1024px){.hero{grid-template-columns:1fr .9fr}.hero h1{font-size:clamp(56px,9vw,110px)}.about{gap:24px}}
+@media(max-width:780px){.hero{min-height:auto;padding-bottom:10px}.hero .txt{padding-inline:var(--px);padding-top:26px}#stage{height:min(62svh,520px)}}
+@media(max-width:600px){section{padding-top:52px;padding-bottom:52px}.grid{gap:14px}.hero h1{font-size:clamp(56px,20vw,96px)}.btn{padding:12px 22px}}
+@media(max-width:420px){header{gap:6px}.logo{font-size:22px}.hr{gap:5px}#lang{max-width:96px;padding:8px 6px}.cartbtn{padding:9px 12px}.fb{width:52px;height:52px}.fab{inset-inline-end:12px}.grid{grid-template-columns:1fr}.btn.o{margin-inline-start:0;margin-top:10px}}
+@media(max-height:500px) and (orientation:landscape){.hero{min-height:auto;grid-template-columns:1fr 1fr}#stage{height:88svh}.fab{flex-direction:row}}
+@media(pointer:coarse){.chip,.cartbtn,.row button,.qty button,#mnav a,.btn{min-height:44px}.qty button{min-width:44px}}
+@media print{header,.fab,#drawer,#adm,#vm,#stage{display:none!important}}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1;direction:ltr}
+.logo small{font:500 9px Jost,sans-serif;letter-spacing:.42em;color:var(--ink);margin-top:3px;padding-inline-start:.42em}
+.lp{font:500 clamp(14px,2.6vw,26px) Jost,sans-serif;letter-spacing:.45em;color:var(--ink);margin:2px 0 6px}
+[lang="ar"] .logo small,[lang="ar"] .lp{font-family:Jost,sans-serif}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top" aria-label="Réda Le Parfum"><span>RÉDA</span><small>LE PARFUM</small></a>
+  <nav id="dnav"><a href="#collection" data-i="coll"></a><a href="#about" data-i="about"></a><a href="#contact" data-i="contact"></a></nav>
+  <div class="hr">
+    <select id="lang" aria-label="Language"><option value="ar">العربية</option><option value="fr">Français</option><option value="es">Español</option><option value="it">Italiano</option><option value="en">English</option></select>
+    <button class="cartbtn" id="openCart"><span data-i="cart"></span> (<span id="cnt">0</span>)</button>
+    <button class="cartbtn" id="burger" aria-label="Menu">☰</button>
+  </div>
+  <div id="mnav"><a href="#collection" data-i="coll"></a><a href="#about" data-i="about"></a><a href="#contact" data-i="contact"></a></div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="txt">
+    <h1>RÉDA</h1>
+    <div class="lp">LE PARFUM</div>
+    <div class="sub" data-i="tag"></div>
+    <p data-i="heroP"></p>
+    <p style="margin-top:22px"><a class="btn" href="#collection" data-i="btnColl"></a><a class="btn o" href="tel:+212674747421" data-i="btnCall"></a></p>
+  </div>
+  <div id="stage" aria-label="3D">
+    <div class="hint" id="hint" data-i="hint"></div>
+  </div>
+</div>
+
+<div class="trust"><div><b>✦</b> <span data-i="tr1"></span></div><div><b>✦</b> <span data-i="tr2"></span></div><div><b>✦</b> <span data-i="tr3"></span></div><div><b>✦</b> <span data-i="tr4"></span></div></div>
+
+<section id="collection">
+  <h2 data-i="collT"></h2>
+  <p class="lead" data-i="collLead"></p>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="band" id="about" style="display:block;text-align:start">
+  <div class="about">
+    <div><h2 data-i="aboutT"></h2><p data-i="aboutP1"></p><p data-i="aboutP2"></p></div>
+    <div class="vals">
+      <div><h3 data-i="v1t"></h3><p data-i="v1p"></p></div>
+      <div><h3 data-i="v2t"></h3><p data-i="v2p"></p></div>
+      <div><h3 data-i="v3t"></h3><p data-i="v3p"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 data-i="contactT"></h2>
+  <p class="lead" data-i="contactLead"></p>
+  <form id="cf" novalidate>
+    <div><label for="cN" data-i="fName"></label><input id="cN" autocomplete="name" maxlength="80"></div>
+    <div><label for="cP" data-i="fPhone"></label><input id="cP" type="tel" inputmode="tel" autocomplete="tel" maxlength="25"></div>
+    <div><label for="cE" data-i="fEmail"></label><input id="cE" type="email" autocomplete="email" maxlength="100"></div>
+    <div><label for="cS" data-i="fSubject"></label><select id="cS"><option data-i="s1"></option><option data-i="s2"></option><option data-i="s3"></option><option data-i="s4"></option></select></div>
+    <div class="w"><label for="cM" data-i="fMsg"></label><textarea id="cM" rows="5" maxlength="900"></textarea></div>
+    <div class="w"><button class="btn" type="submit" data-i="send"></button></div>
+  </form>
+</section>
+</main>
+
+<footer>
+  <a class="tel" href="tel:+212674747421" dir="ltr">+212 674-747421</a>
+  <p style="color:var(--mute);margin-top:14px;font-size:14px" data-i="foot"></p>
+  <button class="lnk" id="admBtn">Espace privé</button>
+</footer>
+
+<div class="fab">
+  <a class="fb call" href="tel:+212674747421" data-al="callL"><svg width="28" height="28" viewBox="0 0 24 24" fill="#1a120a"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+  <a class="fb wa" href="https://wa.me/212674747421" target="_blank" rel="noopener" data-al="waL"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2.5a9.5 9.5 0 0 0-8.1 14.4L2.6 21.4l4.6-1.2A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 7.3c-.3 0-.7.1-1 .5-.4.5-.9 1.3-.4 2.7.7 2 3 4.3 5.1 5.1 1.4.5 2.4.1 2.9-.4.3-.3.4-.8.2-1.1l-1.2-1c-.3-.2-.7-.2-.9.1l-.4.5c-1.200-.4-2.200-1.400-2.700-2.600l.5-.4c.3-.2.3-.6.1-.9L9.500 7.500c-.2-.2-.5-.3-.9-.2z" fill="#fff"/></svg></a>
+</div>
+
+<aside id="drawer" aria-label="Panier">
+  <div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:34px" data-i="cartT"></h2><button class="cartbtn" id="closeCart" data-i="close"></button></div>
+  <div id="items"></div>
+  <div class="tot"><span data-i="total"></span><span id="total">0</span></div>
+  <a class="btn" id="wa" href="#" target="_blank" rel="noopener" style="text-align:center" data-i="order"></a>
+  <button class="btn o" id="clear" style="margin:10px 0 0" data-i="clear"></button>
+</aside>
+
+<div id="vm"><div><button class="cartbtn" id="vx">✕</button><video id="vp" controls playsinline></video></div></div>
+
+<div id="adm" role="dialog" aria-label="Espace privé"><div class="pnl" dir="ltr" style="text-align:left">
+ <div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:32px">Espace privé</h2><button class="cartbtn" id="admClose">Fermer</button></div>
+ <div id="admLogin"><div id="emW" hidden><label for="em">Email</label><input id="em" type="email" autocomplete="username"></div><label for="pw">Mot de passe</label><input id="pw" type="password" autocomplete="current-password"><p style="margin-top:14px"><button class="btn" id="pwGo">Entrer</button></p></div>
+ <div id="admPanel" hidden>
+  <h3>Ajouter un produit (100 ml)</h3>
+  <label for="fN">Nom du parfum</label><input id="fN" placeholder="Ex. Emporio Armani Stronger With You">
+  <label for="fT">Type de collection</label><select id="fT"><option>Homme</option><option>Femme</option><option>Mixte</option><option>Coffret</option></select>
+  <label for="fD">Description (facultatif)</label><input id="fD" placeholder="Ex. Eau de parfum">
+  <label for="fP">Prix (DH)</label><input id="fP" type="number" min="0" inputmode="numeric">
+  <label for="fF">Photo (galerie)</label><input id="fF" type="file" accept="image/*">
+  <label for="fU">… ou lien d’une photo</label><input id="fU" placeholder="https://…">
+  <label for="fV">Vidéo (galerie, max 100 Mo)</label><input id="fV" type="file" accept="video/*">
+  <label for="fVU">… ou lien d’une vidéo (.mp4)</label><input id="fVU" placeholder="https://…">
+  <p style="margin-top:16px"><button class="btn" id="fAdd">Ajouter à la boutique</button></p>
+  <h3>Produits (<span id="admN">0</span>)</h3><div id="admList"></div>
+  <h3>Messages reçus</h3><div id="admMsg"></div>
+  <h3>Sauvegarde</h3>
+  <textarea id="admJson" rows="3"></textarea>
+  <p style="margin-top:10px"><button class="chip" id="exp">Exporter</button> <button class="chip" id="imp">Importer</button> <button class="chip" id="admOut">Se déconnecter</button></p>
+ </div></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const PHONE="212674747421";
+const T={
+ar:{coll:"المجموعة",about:"من نحن",contact:"اتصل بنا",cart:"السلة",tag:"الأناقة في كل لحظة",heroP:"عطور أصلية 100% بحجم 100 مل. اختر عطرك، أدر القارورة، واطلبه عبر واتساب.",btnColl:"اكتشف المجموعة",btnCall:"اتصل بنا",hint:"اسحب لتدوير القارورة",tr1:"عطور أصلية 100%",tr2:"مستوردة من أوروبا",tr3:"قارورة 100 مل",tr4:"خدمة عملاء عبر واتساب",collT:"المجموعة",collLead:"اختر عطرك وشاهده بالأبعاد الثلاثية. الأسعار بالدرهم.",all:"الكل",t_Homme:"رجالي",t_Femme:"نسائي",t_Mixte:"للجنسين",t_Coffret:"علبة هدية",see3d:"عرض 3D",add:"أضف",video:"فيديو",none:"ستتوفر المنتجات قريبًا.",aboutT:"من نحن",aboutP1:"ريدا لو بارفان متجر متخصص في العطور الفاخرة. نقدم عطورًا أصلية 100% مستوردة من أوروبا بحجم 100 مل، مع انتقاء دقيق لكل مرجع.",aboutP2:"نؤمن بأن العطر توقيع شخصي. لذلك نرافق كل عميل في اختياره، من الاستشارة إلى تأكيد الطلب.",v1t:"الأصالة",v1p:"عطور أصلية مستوردة من أوروبا.",v2t:"الانتقاء",v2p:"مجموعة مختارة بعناية بحجم 100 مل.",v3t:"الخدمة",v3p:"مرافقة شخصية عبر واتساب والهاتف.",contactT:"تواصل معنا",contactLead:"اترك لنا رسالة وسنرد عليك بسرعة، أو راسلنا مباشرة عبر واتساب.",fName:"الاسم الكامل",fPhone:"الهاتف",fEmail:"البريد الإلكتروني (اختياري)",fSubject:"الموضوع",s1:"طلب شراء",s2:"معلومات عن عطر",s3:"شراء بالجملة",s4:"أخرى",fMsg:"رسالتك",send:"إرسال عبر واتساب",sent:"تم تجهيز رسالتك على واتساب",req:"أدخل الاسم والهاتف والرسالة",cartT:"سلتك",close:"إغلاق",cartEmpty:"سلتك فارغة. أضف عطرًا من المجموعة.",total:"المجموع",order:"اطلب عبر واتساب",clear:"إفراغ السلة",added:"تمت الإضافة إلى السلة",wa1:"مرحبًا ريدا لو بارفان، أرغب في طلب:",wa2:"مرحبًا ريدا لو بارفان،",tot:"المجموع",foot:"ريدا لو بارفان · تأكيد الدفع والتسليم عبر واتساب",waL:"راسلنا على واتساب",callL:"اتصل بنا",cur:"درهم"},
+fr:{coll:"Collection",about:"Qui sommes-nous",contact:"Contact",cart:"Panier",tag:"L’élégance à chaque instant",heroP:"Parfums 100 % originaux en flacon de 100 ml. Choisissez, faites tourner le flacon, commandez par WhatsApp.",btnColl:"Voir la collection",btnCall:"Nous appeler",hint:"Glissez pour faire tourner le flacon",tr1:"100 % originaux",tr2:"Importés d’Europe",tr3:"Flacons de 100 ml",tr4:"Service client WhatsApp",collT:"La collection",collLead:"Choisissez votre parfum et découvrez-le en 3D. Prix en dirhams.",all:"Tous",t_Homme:"Homme",t_Femme:"Femme",t_Mixte:"Mixte",t_Coffret:"Coffret",see3d:"Voir en 3D",add:"Ajouter",video:"Vidéo",none:"Les produits arrivent bientôt.",aboutT:"Qui sommes-nous",aboutP1:"Réda Le Parfum est une maison spécialisée dans les parfums de prestige. Nous proposons des parfums 100 % originaux, importés d’Europe, en flacons de 100 ml, avec une sélection rigoureuse de chaque référence.",aboutP2:"Nous croyons qu’un parfum est une signature. C’est pourquoi nous accompagnons chaque client, du conseil jusqu’à la confirmation de la commande.",v1t:"Authenticité",v1p:"Parfums originaux importés d’Europe.",v2t:"Sélection",v2p:"Une collection choisie avec soin, en 100 ml.",v3t:"Service",v3p:"Un accompagnement personnel par WhatsApp et téléphone.",contactT:"Contactez-nous",contactLead:"Laissez-nous un message, nous vous répondons rapidement, ou écrivez-nous directement sur WhatsApp.",fName:"Nom complet",fPhone:"Téléphone",fEmail:"Email (facultatif)",fSubject:"Sujet",s1:"Commande",s2:"Renseignements sur un parfum",s3:"Achat en gros",s4:"Autre",fMsg:"Votre message",send:"Envoyer via WhatsApp",sent:"Message préparé sur WhatsApp",req:"Indiquez votre nom, téléphone et message",cartT:"Votre panier",close:"Fermer",cartEmpty:"Votre panier est vide. Ajoutez un parfum depuis la collection.",total:"Total",order:"Commander sur WhatsApp",clear:"Vider le panier",added:"Ajouté au panier",wa1:"Bonjour Réda Le Parfum, je souhaite commander :",wa2:"Bonjour Réda Le Parfum,",tot:"Total",foot:"Réda Le Parfum · Paiement et livraison confirmés par WhatsApp",waL:"Écrire sur WhatsApp",callL:"Appeler",cur:"DH"},
+es:{coll:"Colección",about:"Quiénes somos",contact:"Contacto",cart:"Carrito",tag:"La elegancia en cada instante",heroP:"Perfumes 100 % originales en frasco de 100 ml. Elige, gira el frasco y pide por WhatsApp.",btnColl:"Ver la colección",btnCall:"Llámanos",hint:"Desliza para girar el frasco",tr1:"100 % originales",tr2:"Importados de Europa",tr3:"Frascos de 100 ml",tr4:"Atención por WhatsApp",collT:"La colección",collLead:"Elige tu perfume y descúbrelo en 3D. Precios en dirhams.",all:"Todos",t_Homme:"Hombre",t_Femme:"Mujer",t_Mixte:"Unisex",t_Coffret:"Estuche",see3d:"Ver en 3D",add:"Añadir",video:"Vídeo",none:"Los productos llegarán pronto.",aboutT:"Quiénes somos",aboutP1:"Réda Le Parfum es una casa especializada en perfumes de prestigio. Ofrecemos perfumes 100 % originales, importados de Europa, en frascos de 100 ml, con una selección rigurosa de cada referencia.",aboutP2:"Creemos que un perfume es una firma personal. Por eso acompañamos a cada cliente, desde el asesoramiento hasta la confirmación del pedido.",v1t:"Autenticidad",v1p:"Perfumes originales importados de Europa.",v2t:"Selección",v2p:"Una colección elegida con cuidado, en 100 ml.",v3t:"Servicio",v3p:"Atención personal por WhatsApp y teléfono.",contactT:"Contáctanos",contactLead:"Déjanos un mensaje y te responderemos pronto, o escríbenos directamente por WhatsApp.",fName:"Nombre completo",fPhone:"Teléfono",fEmail:"Email (opcional)",fSubject:"Asunto",s1:"Pedido",s2:"Información sobre un perfume",s3:"Compra al por mayor",s4:"Otro",fMsg:"Tu mensaje",send:"Enviar por WhatsApp",sent:"Mensaje preparado en WhatsApp",req:"Indica tu nombre, teléfono y mensaje",cartT:"Tu carrito",close:"Cerrar",cartEmpty:"Tu carrito está vacío. Añade un perfume de la colección.",total:"Total",order:"Pedir por WhatsApp",clear:"Vaciar carrito",added:"Añadido al carrito",wa1:"Hola Réda Le Parfum, quiero pedir:",wa2:"Hola Réda Le Parfum,",tot:"Total",foot:"Réda Le Parfum · Pago y entrega confirmados por WhatsApp",waL:"Escribir por WhatsApp",callL:"Llamar",cur:"DH"},
+it:{coll:"Collezione",about:"Chi siamo",contact:"Contatti",cart:"Carrello",tag:"L’eleganza in ogni istante",heroP:"Profumi 100 % originali in flacone da 100 ml. Scegli, ruota il flacone, ordina su WhatsApp.",btnColl:"Scopri la collezione",btnCall:"Chiamaci",hint:"Scorri per ruotare il flacone",tr1:"100 % originali",tr2:"Importati dall’Europa",tr3:"Flaconi da 100 ml",tr4:"Assistenza WhatsApp",collT:"La collezione",collLead:"Scegli il tuo profumo e scoprilo in 3D. Prezzi in dirham.",all:"Tutti",t_Homme:"Uomo",t_Femme:"Donna",t_Mixte:"Unisex",t_Coffret:"Cofanetto",see3d:"Vedi in 3D",add:"Aggiungi",video:"Video",none:"I prodotti arriveranno presto.",aboutT:"Chi siamo",aboutP1:"Réda Le Parfum è una maison specializzata in profumi di prestigio. Offriamo profumi 100 % originali, importati dall’Europa, in flaconi da 100 ml, con una selezione rigorosa di ogni referenza.",aboutP2:"Crediamo che un profumo sia una firma personale. Per questo accompagniamo ogni cliente, dalla consulenza alla conferma dell’ordine.",v1t:"Autenticità",v1p:"Profumi originali importati dall’Europa.",v2t:"Selezione",v2p:"Una collezione scelta con cura, da 100 ml.",v3t:"Servizio",v3p:"Assistenza personale via WhatsApp e telefono.",contactT:"Contattaci",contactLead:"Lasciaci un messaggio e ti risponderemo presto, oppure scrivici direttamente su WhatsApp.",fName:"Nome completo",fPhone:"Telefono",fEmail:"Email (facoltativa)",fSubject:"Oggetto",s1:"Ordine",s2:"Informazioni su un profumo",s3:"Acquisto all’ingrosso",s4:"Altro",fMsg:"Il tuo messaggio",send:"Invia su WhatsApp",sent:"Messaggio preparato su WhatsApp",req:"Inserisci nome, telefono e messaggio",cartT:"Il tuo carrello",close:"Chiudi",cartEmpty:"Il carrello è vuoto. Aggiungi un profumo dalla collezione.",total:"Totale",order:"Ordina su WhatsApp",clear:"Svuota il carrello",added:"Aggiunto al carrello",wa1:"Buongiorno Réda Le Parfum, vorrei ordinare:",wa2:"Buongiorno Réda Le Parfum,",tot:"Totale",foot:"Réda Le Parfum · Pagamento e consegna confermati su WhatsApp",waL:"Scrivi su WhatsApp",callL:"Chiama",cur:"DH"},
+en:{coll:"Collection",about:"About us",contact:"Contact",cart:"Cart",tag:"Elegance in every moment",heroP:"100% original perfumes in 100 ml bottles. Choose, spin the bottle, order on WhatsApp.",btnColl:"View the collection",btnCall:"Call us",hint:"Drag to spin the bottle",tr1:"100% original",tr2:"Imported from Europe",tr3:"100 ml bottles",tr4:"WhatsApp customer service",collT:"The collection",collLead:"Choose your fragrance and explore it in 3D. Prices in dirhams.",all:"All",t_Homme:"Men",t_Femme:"Women",t_Mixte:"Unisex",t_Coffret:"Gift set",see3d:"View in 3D",add:"Add",video:"Video",none:"Products are coming soon.",aboutT:"About us",aboutP1:"Réda Le Parfum is a house dedicated to prestige fragrances. We offer 100% original perfumes imported from Europe, in 100 ml bottles, with a rigorous selection of every reference.",aboutP2:"We believe a fragrance is a personal signature. That is why we guide each customer, from advice to order confirmation.",v1t:"Authenticity",v1p:"Original perfumes imported from Europe.",v2t:"Selection",v2p:"A carefully chosen collection, in 100 ml.",v3t:"Service",v3p:"Personal support by WhatsApp and phone.",contactT:"Contact us",contactLead:"Leave us a message and we will reply quickly, or write to us directly on WhatsApp.",fName:"Full name",fPhone:"Phone",fEmail:"Email (optional)",fSubject:"Subject",s1:"Order",s2:"Information about a perfume",s3:"Wholesale",s4:"Other",fMsg:"Your message",send:"Send via WhatsApp",sent:"Message prepared on WhatsApp",req:"Enter your name, phone and message",cartT:"Your cart",close:"Close",cartEmpty:"Your cart is empty. Add a perfume from the collection.",total:"Total",order:"Order on WhatsApp",clear:"Empty cart",added:"Added to cart",wa1:"Hello Réda Le Parfum, I would like to order:",wa2:"Hello Réda Le Parfum,",tot:"Total",foot:"Réda Le Parfum · Payment and delivery confirmed on WhatsApp",waL:"Chat on WhatsApp",callL:"Call",cur:"DH"}
+};
+let lang="ar";try{lang=localStorage.getItem("reda_lang")||"ar";if(!T[lang])lang="ar"}catch(e){}
+const tr=k=>(T[lang]&&T[lang][k])||T.fr[k]||k;
+function setLang(l){
+ lang=l;try{localStorage.setItem("reda_lang",l)}catch(e){}
+ document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-i]").forEach(e=>e.textContent=tr(e.dataset.i));
+ document.querySelectorAll("[data-al]").forEach(e=>e.setAttribute("aria-label",tr(e.dataset.al)));
+ $("#lang").value=l;renderGrid();renderCart();
+}
+
+let P=[
+ {id:1,n:"Emporio Armani Stronger With You",t:"Homme",d:"Parfum pour homme · Emporio Armani",p:450,c:"#3b4a6e",img:"https://i.imgur.com/OlK0TRt.jpeg"}
+];
+try{const sp=JSON.parse(localStorage.getItem("reda_products")||"null");if(Array.isArray(sp)&&sp.length)P=sp}catch(e){}
+const ADMIN_PW="Redakenitra2026€"; /* CHANGEZ CE MOT DE PASSE */
+let cart={},sel=0,filt="Tous";
+const esc=t=>String(t==null?"":t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function saveP(){try{localStorage.setItem("reda_products",JSON.stringify(P));return true}catch(e){toast("Stockage plein : utilisez une photo plus légère ou un lien");return false}}
+try{cart=JSON.parse(localStorage.getItem("reda_cart")||"{}")}catch(e){}
+const $=s=>document.querySelector(s);
+const fmt=n=>n.toLocaleString("fr-FR")+" "+tr("cur");
+function save(){try{localStorage.setItem("reda_cart",JSON.stringify(cart))}catch(e){}}
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),1800)}
+
+function renderGrid(){
+ if(!P.length){$("#chips").innerHTML="";$("#grid").innerHTML='<p style="color:var(--mute)">'+tr("none")+'</p>';return}
+ const types=["Tous",...new Set(P.map(x=>x.t).filter(Boolean))];
+ if(!types.includes(filt))filt="Tous";
+ const L=t=>t=="Tous"?tr("all"):(T[lang]["t_"+t]||t);
+ $("#chips").innerHTML=types.map(t=>`<button class="chip ${t==filt?'on':''}" data-f="${esc(t)}">${esc(L(t))}</button>`).join("");
+ $("#grid").innerHTML=P.map((x,i)=>({x,i})).filter(o=>filt=="Tous"||o.x.t==filt).map(({x,i})=>`<article class="card ${i==sel?'sel':''}">
+ <div class="sw" style="background:var(--bg2)">${x.img?`<img src="${esc(x.img)}" alt="${esc(x.n)} – Réda Le Parfum" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><i style="--c:${esc(x.c||'#c9831d')};display:none"></i>`:`<i style="--c:${esc(x.c||'#c9831d')}"></i>`}</div>
+ <h3>${esc(x.n)}</h3><small>${esc(L(x.t))} · 100 ml${x.d?" · "+esc(x.d):""}</small><div class="price">${fmt(+x.p||0)}</div>
+ <div class="row"><button data-v="${i}">${tr("see3d")}</button>${x.video?`<button data-vid="${i}">▶ ${tr("video")}</button>`:""}<button class="add" data-a="${x.id}">${tr("add")}</button></div></article>`).join("");
+}
+$("#chips").addEventListener("click",e=>{if(e.target.dataset.f){filt=e.target.dataset.f;renderGrid()}});
+$("#grid").addEventListener("click",e=>{
+ const v=e.target.dataset.v,a=e.target.dataset.a,vd=e.target.dataset.vid;
+ if(vd!==undefined){$("#vp").src=P[+vd].video;$("#vm").classList.add("on");$("#vp").play().catch(()=>{})}
+ if(v!==undefined){sel=+v;setColor(P[sel].c||"#c9831d");renderGrid();window.scrollTo({top:0,behavior:"smooth"})}
+ if(a){cart[a]=(cart[a]||0)+1;save();renderCart();toast(tr("added"))}
+});
+function renderCart(){
+ let t=0,c=0;
+ const h=Object.keys(cart).map(id=>{const x=P.find(y=>y.id==id);if(!x){if(P.length)delete cart[id];return ""}const q=cart[id];t+=x.p*q;c+=q;
+  return `<div class="it"><div><b>${esc(x.n)}</b><br><small>${fmt(x.p)}</small></div><div class="qty"><button data-m="${id}" aria-label="Moins">−</button> ${q} <button data-p="${id}" aria-label="Plus">+</button></div></div>`}).join("");
+ $("#items").innerHTML=h||"<p style='color:var(--mute)'>"+tr("cartEmpty")+"</p>";
+ $("#total").textContent=fmt(t);$("#cnt").textContent=c;
+ const lines=Object.keys(cart).map(id=>{const x=P.find(y=>y.id==id);return `- ${cart[id]} x ${x.n} (${fmt(x.p*cart[id])})`});
+ $("#wa").href=`https://wa.me/${PHONE}?text=`+encodeURIComponent(tr("wa1")+"\n"+lines.join("\n")+"\n"+tr("tot")+" : "+fmt(t));
+ $("#wa").style.display=c?"block":"none";
+}
+$("#items").addEventListener("click",e=>{
+ const m=e.target.dataset.m,p=e.target.dataset.p;
+ if(p)cart[p]++;
+ if(m){cart[m]--;if(cart[m]<=0)delete cart[m]}
+ save();renderCart();
+});
+$("#openCart").onclick=()=>$("#drawer").classList.add("open");
+$("#closeCart").onclick=()=>$("#drawer").classList.remove("open");
+$("#clear").onclick=()=>{cart={};save();renderCart()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#drawer").classList.remove("open")});
+
+/* ---------- Firebase ---------- */
+/* 1) Collez ici la config de votre projet (Paramètres du projet > Vos applications > Web) */
+const FIREBASE_CONFIG={apiKey:"AIzaSyC0YT0c4MSfa0fMnFld4ggLjFQ4DOnMvrg",authDomain:"redaleparfum1.firebaseapp.com",projectId:"redaleparfum1",storageBucket:"redaleparfum1.firebasestorage.app",messagingSenderId:"277431812445",appId:"1:277431812445:web:6f05d2aa5770ca6383a8b4"};
+const FB=!!(FIREBASE_CONFIG.apiKey&&window.firebase);
+let db,auth;
+if(FB){
+ firebase.initializeApp(FIREBASE_CONFIG);db=firebase.firestore();auth=firebase.auth();
+ P=[];$("#emW").hidden=false;
+ db.collection("products").orderBy("created").onSnapshot(sn=>{
+  P=sn.docs.map(d=>({...d.data(),id:d.id}));sel=0;renderGrid();renderCart();renderAdm();
+  if(typeof setColor==="function"&&P[0])setColor(P[0].c||"#c9831d");
+ },()=>toast("Connexion Firebase impossible"));
+}
+/* ---------- Espace privé ---------- */
+const adm=$("#adm");
+function renderAdm(){
+ $("#admN").textContent=P.length;
+ $("#admList").innerHTML=P.map((x,i)=>`<div class="it"><div><b>${esc(x.n)}</b><br><small>${esc(x.t)} · ${fmt(+x.p||0)}</small></div><button class="chip" data-del="${i}">Supprimer</button></div>`).join("");
+}
+function readImg(file){return new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);ok(c.toDataURL("image/jpeg",.72))};im.onerror=no;im.src=r.result};r.onerror=no;r.readAsDataURL(file)})}
+function upVideo(f){return new Promise((ok,no)=>{const r=firebase.storage().ref("videos/"+Date.now()+"_"+f.name.replace(/[^\w.-]/g,"_"));const t=r.put(f);t.on("state_changed",s=>{$("#fAdd").textContent=Math.round(s.bytesTransferred/s.totalBytes*100)+" %"},no,()=>{$("#fAdd").textContent="Ajouter à la boutique";r.getDownloadURL().then(ok,no)})})}
+$("#admBtn").onclick=()=>{adm.classList.add("on");$("#pw").focus()};
+$("#admClose").onclick=()=>adm.classList.remove("on");
+$("#pwGo").onclick=()=>{
+ const ok=()=>{$("#admLogin").hidden=true;$("#admPanel").hidden=false;$("#pw").value="";renderAdm();
+  if(FB&&!window._msgs){window._msgs=1;db.collection("messages").orderBy("created","desc").limit(30).onSnapshot(sn=>{$("#admMsg").innerHTML=sn.docs.map(d=>{const x=d.data();return `<div class="it"><div><b>${esc(x.name)}</b> · ${esc(x.phone)}<br><small>${esc(x.subject)} : ${esc(x.msg)}</small></div></div>`}).join("")||"—"},()=>{})}};
+ if(FB){auth.signInWithEmailAndPassword($("#em").value.trim(),$("#pw").value).then(ok).catch(()=>toast("Email ou mot de passe incorrect"));return}
+ if($("#pw").value===ADMIN_PW){ok()}else toast("Mot de passe incorrect")};
+$("#pw").addEventListener("keydown",e=>{if(e.key==="Enter")$("#pwGo").click()});
+$("#admOut").onclick=()=>{if(FB)auth.signOut();$("#admPanel").hidden=true;$("#admLogin").hidden=false;adm.classList.remove("on")};
+$("#fAdd").onclick=async()=>{
+ const n=$("#fN").value.trim(),p=parseFloat($("#fP").value);
+ if(!n||!(p>=0)){toast("Indiquez le nom et le prix");return}
+ let img=$("#fU").value.trim();
+ const f=$("#fF").files[0];
+ if(f){try{img=await readImg(f)}catch(e){toast("Photo illisible");return}}
+ let video=$("#fVU").value.trim();const vf=$("#fV").files[0];
+ if(vf){
+  if(!FB){toast("Vidéo : Firebase requis");return}
+  if(vf.size>100*1048576){toast("Vidéo trop lourde (max 100 Mo)");return}
+  try{video=await upVideo(vf)}catch(e){$("#fAdd").textContent="Ajouter à la boutique";toast("Storage non activé ou refusé");return}
+ }
+ const item={n,t:$("#fT").value,d:$("#fD").value.trim(),p,c:"#c9831d",img,video};
+ if(FB){try{await db.collection("products").add({...item,created:Date.now()})}catch(e){toast("Refusé : vérifiez la connexion et les règles");return}}
+ else{const old=JSON.stringify(P);P.push({id:Date.now(),...item});if(!saveP()){P=JSON.parse(old);return}renderAdm();renderGrid()}
+ ["fN","fD","fP","fF","fU","fV","fVU"].forEach(i=>$("#"+i).value="");
+ toast("Produit ajouté");
+};
+$("#admList").addEventListener("click",e=>{
+ const d=e.target.dataset.del;if(d===undefined)return;
+ if(FB){db.collection("products").doc(P[+d].id).delete().then(()=>toast("Produit supprimé")).catch(()=>toast("Refusé : vérifiez les règles"));return}
+ if(P.length<2){toast("Gardez au moins un produit");return}
+ P.splice(+d,1);sel=0;saveP();renderAdm();renderGrid();renderCart();
+});
+$("#exp").onclick=()=>{const t=JSON.stringify(P);$("#admJson").value=t;try{navigator.clipboard.writeText(t)}catch(e){}toast("Liste exportée")};
+$("#imp").onclick=()=>{try{const a=JSON.parse($("#admJson").value);if(!Array.isArray(a)||!a.length)throw 0;if(FB){a.forEach((x,i)=>{const {id,...r}=x;db.collection("products").add({...r,created:Date.now()+i})});toast("Import en cours");return}P=a;sel=0;saveP();renderAdm();renderGrid();renderCart();toast("Liste importée")}catch(e){toast("JSON invalide")}};
+/* ---------- 3D ---------- */
+let liquidMat,setColor=()=>{};
+(function(){
+ const box=$("#stage");
+ if(!window.THREE||!document.createElement("canvas").getContext("webgl")){box.innerHTML='<p style="padding:40px;text-align:center">Aperçu 3D indisponible sur cet appareil.</p>';return}
+ const R=new THREE.WebGLRenderer({antialias:true,alpha:true});
+ R.setPixelRatio(Math.min(devicePixelRatio,2));box.prepend(R.domElement);
+ const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(32,1,.1,50);C.position.set(0,.4,9);
+ S.add(new THREE.AmbientLight(0xffffff,.7));
+ const k=new THREE.DirectionalLight(0xfff0d0,1.2);k.position.set(4,5,6);S.add(k);
+ const r=new THREE.PointLight(0xffc870,1.4,30);r.position.set(-5,1,3);S.add(r);
+ const G=new THREE.Group();S.add(G);
+ const gold=new THREE.MeshStandardMaterial({color:0xd9a441,metalness:1,roughness:.22});
+ const glass=new THREE.MeshPhysicalMaterial({color:0xffffff,transparent:true,opacity:.2,roughness:.05,metalness:0,clearcoat:1,side:THREE.DoubleSide,depthWrite:false});
+ liquidMat=new THREE.MeshPhysicalMaterial({color:(P[0]&&P[0].c)||"#c9831d",transparent:true,opacity:.9,roughness:.15,clearcoat:.6});
+ const add=(g,m,x,y,z)=>{const o=new THREE.Mesh(g,m);o.position.set(x,y,z);G.add(o);return o};
+ add(new THREE.BoxGeometry(2.4,3,1.1),liquidMat,0,-.1,0).scale.set(.9,.86,.86);
+ add(new THREE.BoxGeometry(2.4,3,1.1),glass,0,-.1,0);
+ add(new THREE.BoxGeometry(2.4,.28,1.1),new THREE.MeshPhysicalMaterial({color:0xffffff,transparent:true,opacity:.35,roughness:.05}),0,-1.5,0);
+ add(new THREE.CylinderGeometry(.5,.55,.35,32),gold,0,1.55,0);
+ add(new THREE.CylinderGeometry(.5,.5,.25,32),new THREE.MeshStandardMaterial({color:0xb98a2e,metalness:1,roughness:.5}),0,1.8,0);
+ const cap=add(new THREE.BoxGeometry(1.15,.85,.75),new THREE.MeshStandardMaterial({color:0x0b0b0b,metalness:.4,roughness:.2}),0,2.35,0);
+ cap.rotation.y=.2;
+ // emblème doré original : anneau + barre
+
+ // IMAGE DU LOGO (changez l'URL ici)
+ const LOGO_URL="https://i.imgur.com/E0K0bD8.jpeg";
+ // La photo du parfum tourne en 3D (plaque avec bords dorés). Si elle ne charge pas, le flacon 3D reste affiché.
+ const tl=new THREE.TextureLoader();tl.setCrossOrigin("anonymous");
+ tl.load(LOGO_URL,tex=>{
+  const a=tex.image.width/tex.image.height,h=4.4,w=Math.min(h*a,4);
+  const edge=new THREE.MeshStandardMaterial({color:0xd9a441,metalness:1,roughness:.25});
+  const face=new THREE.MeshBasicMaterial({map:tex});
+  const m=new THREE.Mesh(new THREE.BoxGeometry(w,w/a>h?h:w/a,.14),[edge,edge,edge,edge,face,face]);
+  const P2=new THREE.Group();P2.add(m);G.add(P2);
+  G.children.forEach(o=>{if(o!==P2)o.visible=false});
+ },undefined,()=>console.warn("Image non chargée : flacon 3D affiché"));
+ // bulles
+ const bm=new THREE.MeshPhysicalMaterial({color:0xffffff,transparent:true,opacity:.28,roughness:0});
+ [[-.5,.5,.2,.2],[.5,-.7,.2,.28],[.1,.9,-.1,.14],[-.6,-.9,.1,.18]].forEach(b=>add(new THREE.SphereGeometry(b[3],20,20),bm,b[0],b[1],b[2]));
+ // étincelles
+ const n=160,pos=new Float32Array(n*3);
+ for(let i=0;i<n;i++){pos.set([(Math.random()-.5)*10,(Math.random()-.5)*7,(Math.random()-.5)*5-1],i*3)}
+ const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pos,3));
+ const sp=new THREE.Points(pg,new THREE.PointsMaterial({color:0xf2cf80,size:.06,transparent:true,opacity:.8}));S.add(sp);
+ const fl=new THREE.Mesh(new THREE.CircleGeometry(3.2,48),new THREE.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.14}));
+ fl.rotation.x=-Math.PI/2;fl.position.y=-1.8;S.add(fl);
+
+ setColor=c=>liquidMat.color.set(c);
+ function size(){const w=box.clientWidth,h=box.clientHeight;R.setSize(w,h);C.aspect=w/h;C.updateProjectionMatrix()}
+ function size(){const w=box.clientWidth,h=box.clientHeight;if(!w||!h)return;R.setSize(w,h);C.aspect=w/h;C.position.z=9+Math.max(0,1.1-w/h)*7;C.updateProjectionMatrix()}
+ if(window.ResizeObserver)new ResizeObserver(size).observe(box);else addEventListener("resize",size);size();
+
+ let rot=.4,vel=.004,drag=false,lx=0;
+ const down=e=>{drag=true;lx=e.clientX;box.style.cursor="grabbing";$("#hint").style.opacity=0};
+ const up=()=>{drag=false;box.style.cursor="grab"};
+ const move=e=>{if(!drag)return;const d=e.clientX-lx;lx=e.clientX;rot+=d*.01;vel=d*.0006};
+ box.addEventListener("pointerdown",down);addEventListener("pointerup",up);addEventListener("pointermove",move);
+ const calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+ let vis=true;new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(box);
+ (function loop(t){
+  requestAnimationFrame(loop);if(!vis)return;
+  if(!drag){rot+=vel;vel+=((calm?0:.004)-vel)*.02}
+  G.rotation.y=rot;G.position.y=Math.sin(t*.0012)*.08;
+  sp.rotation.y=t*.00005;
+  R.render(S,C);
+ })(0);
+})();
+$("#lang").onchange=e=>setLang(e.target.value);
+$("#burger").onclick=()=>$("#mnav").classList.toggle("on");
+$("#mnav").onclick=e=>{if(e.target.tagName==="A")$("#mnav").classList.remove("on")};
+$("#vm").onclick=e=>{if(e.target.id==="vm"||e.target.id==="vx"){$("#vp").pause();$("#vm").classList.remove("on")}};
+$("#cf").onsubmit=async e=>{
+ e.preventDefault();
+ const n=$("#cN").value.trim(),ph=$("#cP").value.trim(),m=$("#cM").value.trim();
+ if(!n||ph.replace(/\D/g,"").length<8||!m){toast(tr("req"));return}
+ const d={name:n,phone:ph,email:$("#cE").value.trim(),subject:$("#cS").selectedOptions[0].textContent,msg:m,lang,created:Date.now()};
+ if(FB){try{await db.collection("messages").add(d)}catch(x){}}
+ const txt=tr("wa2")+"\n"+tr("fName")+": "+n+"\n"+tr("fPhone")+": "+ph+"\n"+tr("fSubject")+": "+d.subject+"\n"+m;
+ window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(txt),"_blank");
+ e.target.reset();toast(tr("sent"));
+};
+setLang(lang);
+</script>
+</body>
+</html>
